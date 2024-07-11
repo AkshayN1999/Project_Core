@@ -1,0 +1,42 @@
+﻿@model Project_Core.Models.Registeration
+<div align="center">
+    <img src="~/PHS/logomvc.png" height="200px"/>
+<form asp-action="Insert_Click" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label">Name:</label>
+        <input asp-for="name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Age:</label>
+        <input asp-for="age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Address:</label>
+        <input asp-for="address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Email:</label>
+        <input asp-for="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Username:</label>
+        <input asp-for="username" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Password:</label>
+        <input asp-for="password" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <input type="submit" value="Create Account" class="btn btn-success"/>
+    </div>
+</form>
+</div>
+@{
+    if (TempData["msg"] != null)
+    {
+            <script>
+                alert('@TempData["msg"]');
+            </script>
+    }
+}

@@ -1,0 +1,22 @@
+﻿@model Project_Core.Models.Registeration
+<center>
+    <h1>Profile View</h1>
+    <form asp-action="Profile_Load" class="form-horizontal">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>@Model.eid</td>
+                <td>@Model.name</td>
+                <td>@Model.age</td>
+                <td>@Model.address</td>
+                <td>@Model.email</td>
+            </tr>
+        </table>
+    </form>
+</center>

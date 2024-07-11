@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Project_Core.Models.BookTabs>
+<center>
+    <h1>All the book summaries.</h1>
+    <img src="~/PHS/logomvc.png" width="400px"/>
+    <table align="center" class="container">
+        <tr>
+            <th style="padding:0 20px">Book Name</th>
+            <th style="padding:0 20px">Book Summary</th>
+            <hr />
+        </tr>
+        @foreach(var emp in Model)
+        {
+            <tr>
+                <td style="padding:0 20px">@emp.BookName</td>
+                <td style="padding:0 20px">@emp.BookSummary</td>
+                <td><hr /></td>
+            </tr>
+        }
+    </table>
+</center>
